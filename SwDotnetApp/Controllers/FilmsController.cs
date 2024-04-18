@@ -51,7 +51,7 @@ namespace SwDotnetApp.Controllers
                         Vehicles = _film.Vehicles,
                         Characters = _film.Characters,
                         opening_crawl = _film.opening_crawl,
-                        ReleaseDate = _film.ReleaseDate,
+                        release_date = _film.release_date,
                         Species = _film.Species,
                         Planets = _film.Planets,
                         Starships = _film.Starships,
