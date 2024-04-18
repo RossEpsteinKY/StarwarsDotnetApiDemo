@@ -30,3 +30,5 @@ D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\obj\Debug\net8.0\refint\SwDotne
 D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\obj\Debug\net8.0\SwDotnetApp.pdb
 D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\obj\Debug\net8.0\SwDotnetApp.genruntimeconfig.cache
 D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\obj\Debug\net8.0\ref\SwDotnetApp.dll
+D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\obj\Debug\net8.0\SwDotnetApp.sourcelink.json
+D:\code\starwars-dotnet-api\SwDotnet\SwDotnetApp\bin\Debug\net8.0\Newtonsoft.Json.dll
