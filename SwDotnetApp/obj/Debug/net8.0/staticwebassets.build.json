@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cw15JhOTe2ms0FElmePqyW0xH+98krVDJBc+z3RRNkw=",
+  "Source": "SwDotnetApp",
+  "BasePath": "_content/SwDotnetApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
