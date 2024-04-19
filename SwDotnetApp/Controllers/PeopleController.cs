@@ -36,11 +36,6 @@ namespace SwDotnetApp.Controllers
         [HttpGet]
         public async Task<List<object>> GetAllPeople()
         {
-           
-
-
-
-
            List<dynamic> peopleList = new List<dynamic>();
       
             var response = await _client.GetAsync(baseUrl);
@@ -79,7 +74,7 @@ namespace SwDotnetApp.Controllers
         public async Task<object> GetOneFilm(int id)
         {
 
-            dynamic testPerson = new ExpandoObject();
+            dynamic newPerson = new ExpandoObject();
             var response = await _client.GetAsync(baseUrl +  id);
             if (response.IsSuccessStatusCode)
             {
@@ -90,13 +85,10 @@ namespace SwDotnetApp.Controllers
                 
                 if (_person != null)
                 {
-                    
-          
-
                     return _person;
                 }
             }
-            return testPerson;
+            return newPerson;
             
         }
 

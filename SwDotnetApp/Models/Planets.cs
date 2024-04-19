@@ -23,16 +23,16 @@
          * **/
 
 		public string? Name { get; set; }
-		public int? RotationPeriod { get; set; }
+		public int? Rotation_Period { get; set; }
 
-		public int? OrbitalPeriod { get; set; }
+		public int? Orbital_Period { get; set; }
 
 		public int? Diameter { get; set; }
 		public string? Climate { get; set; }
 		public string? Gravity { get; set; }
 		public string? Terrain { get; set; }
-		public int? SurfaceWater { get; set; }
-		public int? Population { get; set; }
+		public string? Surface_Water { get; set; }
+		public string? Population { get; set; }
 
 		public string[]? Residents { get; set; }
 		public string[]? Films { get; set; }
