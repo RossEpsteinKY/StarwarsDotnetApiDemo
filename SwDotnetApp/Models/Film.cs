@@ -19,10 +19,4 @@
         public string url { get; set; }
     }
 
-    public class AllFilms
-    {
-        public Film[]? FilmsList { get; set; }
-
-        
-    }
 }

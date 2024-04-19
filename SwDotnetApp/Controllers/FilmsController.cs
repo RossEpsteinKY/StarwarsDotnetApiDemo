@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SwDotnetApp.Models;
@@ -25,16 +26,17 @@ namespace SwDotnetApp.Controllers
         public object? Film { get; private set; }
 
 
-        [HttpGet]
+        [HttpGet("{id:int}")]
         // use `public` instead of `static`
         // only this is then visible in Swagger UI
-        public async Task<Film> GetOneFilm(int Id )
+        public async Task<Film> GetOneFilm(int id)
         {
 
 
-            var response = await _client.GetAsync(baseUrl +  Id);
+            var response = await _client.GetAsync(baseUrl +  id);
             if (response.IsSuccessStatusCode)
             {
+                Console.WriteLine("id is " + id);
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var _film = JsonConvert.DeserializeObject<Film>(jsonString);
 
@@ -65,8 +67,41 @@ namespace SwDotnetApp.Controllers
             return new Film();
             
         }
-        
 
-        
+        [HttpGet]
+        public async Task<List<Film>> GetAllFilms()
+        {
+            List<Film> filmList = new List<Film>();
+      
+            var response = await _client.GetAsync(baseUrl);
+            if (response.IsSuccessStatusCode)
+            {
+
+                
+                //System.Diagnostics.Debug.WriteLine(response.Content);
+
+                var jsonString = await response.Content.ReadAsStringAsync();
+                JsonConvert.DeserializeObject<dynamic>(jsonString);
+                
+                dynamic _films = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                
+                //var _films = JsonConvert.DeserializeObject<Film>(jsonString);
+                
+                
+                foreach (var film in _films.results)
+                {
+                    var _film = JsonConvert.DeserializeObject<Film>(film.ToString());
+                    filmList.Add(_film);
+                }
+
+                return filmList;
+            }
+
+            return filmList;
+        }
+
+
+
+
     }
 }
