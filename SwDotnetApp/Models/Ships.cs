@@ -25,17 +25,19 @@
 
 **/
 
-		public required string Name { get; set; }
+		public string? Name { get; set; }
 		public string? Model { get; set; }
 		public string? Manufacturer { get; set; }
-		public int? Cost { get; set; }
-		public int? Length { get; set; }
-		public string? MaxSpeed { get; set; }
+		public string? Cost_In_Credits { get; set; }
+		public string? Length { get; set; }
+		public string? Max_Atmosphering_Speed { get; set; }
 		public string? Crew { get; set; }
 		public string? Passengers { get; set; }
-		public int? CargoCapacity{ get; set; }
-		public string? HyperdriveRating { get; set; }
-		public string[]? Pilots { get; set; }
+		public string? Cargo_Capacity{ get; set; }
+		public string? Hyperdrive_Rating { get; set; }
+		public string? MGLT { get; set; }
+		public string? Starship_Class { get; set; }
+        public string[]? Pilots { get; set; }
 		public string[]? Films { get; set; }
 		public DateTime? Created { get; set; }
 		public DateTime? Edited { get; set; }
