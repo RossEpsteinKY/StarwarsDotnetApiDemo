@@ -1,8 +1,11 @@
-# Star Wars Public API C# Playground
-
-### Intent
+# Star Wars Public API C# Demo
+### Intent:
 The intent of this project repo is for practice and demo work with C# .Net Core 8 and accessing external web APIs with hardcorded Object data, and dynamic assignment of data to defined classes.  
 
+### Technologies In Use:
+- C#
+- .Net Core 8
+- Data provided by <https://swapi.dev>
 
 #### ToDo:
 - Front End Plans:
